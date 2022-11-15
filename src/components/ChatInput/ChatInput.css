@@ -1,0 +1,9 @@
+.input-field{
+    width: 100%;
+    border-radius: 15px;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border: none;
+    height: 2rem;
+    padding-left: 1rem;
+}
