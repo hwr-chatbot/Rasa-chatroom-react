@@ -40,9 +40,9 @@
 }
 
 .chatview-me-message > span > img {
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }
 
 .chatview-bot-message > span > img {
-    margin-left: 0.5rem;
+    margin-right: 0.5rem;
 }

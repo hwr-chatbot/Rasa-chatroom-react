@@ -6,6 +6,12 @@ type ChatInputProps = {
     updateHistoryFunction: Function
 }
 
+type RasaApiResponse = {
+    text: string,
+    image: string,
+    recipient: string
+}
+
 const requestOptions: RequestInit = {
     method: "POST",
     mode: "cors",
@@ -24,8 +30,16 @@ export default function ChatInput(props: ChatInputProps) {
                 body: JSON.stringify({sender: "lucas", message: e.currentTarget.value})
             })
                 .then((raw) => raw.json())
-                .then((data) => {
+                .then((data: RasaApiResponse[]) => {
+
                     let response: string = data[0].text;
+                    data.forEach((textPart: RasaApiResponse) => {
+                        if (textPart.text !== undefined) {
+
+                        }
+                    })
+
+
                     props.history.push({text: response, fromBot: true})
                     props.updateHistoryFunction({
                         history: props.history
