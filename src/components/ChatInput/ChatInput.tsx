@@ -32,13 +32,10 @@ export default function ChatInput(props: ChatInputProps) {
                 .then((raw) => raw.json())
                 .then((data: RasaApiResponse[]) => {
 
-                    let response: string = data[0].text;
-                    data.forEach((textPart: RasaApiResponse) => {
-                        if (textPart.text !== undefined) {
-
-                        }
-                    })
-
+                    let response: string = data.map((response: RasaApiResponse) => {
+                        if (response.text !== undefined)
+                            return response.text
+                    }).join("\r\n")
 
                     props.history.push({text: response, fromBot: true})
                     props.updateHistoryFunction({
