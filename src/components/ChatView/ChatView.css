@@ -9,40 +9,34 @@
     flex-direction: column;
 }
 
-.chatview-me-message {
-    border-color: red;
+.chatview-me-message, .chatview-bot-message {
     margin: 1rem;
     display: flex;
-    flex-direction: row-reverse;
     word-wrap: anywhere;
     text-align: left;
 }
 
+.chatview-me-message {
+    flex-direction: row-reverse;
+}
+
 .chatview-bot-message {
-    margin: 1rem;
-    width: 100%;
-    text-align: left;
-    display: flex;
     flex-direction: row;
 }
 
-.chatview-bot-message > span {
+.chatview-bot-message > span, .chatview-me-message > span {
     background-color: green;
     padding: 0.5rem;
     border-radius: 15px;
     display: flex;
+    white-space: pre;
 }
+
 .chatview-me-message > span {
-    padding: 0.5rem;
-    border-radius: 15px;
     background-color: lightgreen;
-    display: flex;
+    max-width: 50%;
 }
 
-.chatview-me-message > span > img {
-    margin-right: 0.5rem;
-}
-
-.chatview-bot-message > span > img {
+.chatview-me-message > span > img, .chatview-bot-message > span > img {
     margin-right: 0.5rem;
 }
