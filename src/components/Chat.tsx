@@ -1,4 +1,4 @@
-import {KeyboardEventHandler, useState} from "react";
+import {useState} from "react";
 import ChatInput from "./ChatInput/ChatInput";
 import ChatView from "./ChatView/ChatView";
 import {ChatMessage} from "../types/ChatMessage";
@@ -17,8 +17,12 @@ export default function Chat({}: ChatProps) {
     const [state, setState] = useState<ChatState>({history: []});
     return (
         <div className="chat-container">
-            <ChatView history={state.history}/>
-            <ChatInput history={state.history} updateHistoryFunction={setState}/>
+            <div>
+                <ChatView history={state.history}/>
+            </div>
+            <div className="chatinput-container">
+                <ChatInput history={state.history} updateHistoryFunction={setState}/>
+            </div>
         </div>
     )
 }
