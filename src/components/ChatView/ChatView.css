@@ -13,6 +13,7 @@
     margin: 1rem;
     display: flex;
     word-wrap: anywhere;
+    white-space: pre-line;
     text-align: left;
 }
 
@@ -29,7 +30,6 @@
     padding: 0.5rem;
     border-radius: 15px;
     display: flex;
-    white-space: pre;
 }
 
 .chatview-me-message > span {
