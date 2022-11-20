@@ -4,7 +4,7 @@ import Chat from "./components/Chat";
 function App() {
 
     return (
-        <div className="App">
+        <div className="app">
             <Chat host="localhost" port={5505} useHttps={true}/>
         </div>
     )
