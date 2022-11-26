@@ -35,6 +35,8 @@ export default function ChatInput(props: ChatInputProps) {
                     let response: string = data.map((response: RasaApiResponse) => {
                         if (response.text !== undefined)
                             return response.text
+                        if (response.image !== undefined)
+                            return response.image
                     }).join("\r\n")
 
                     props.history.push({text: response, fromBot: true})
