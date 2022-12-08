@@ -41,4 +41,5 @@
 
 .chatview-me-message > span > img, .chatview-bot-message > span > img {
     margin-right: 0.5rem;
+    border-radius: 10px;
 }
