@@ -28,7 +28,7 @@
 }
 
 .chatview-bot-message > span, .chatview-me-message > span {
-    background-color: green;
+    background-color: #d50c2f;
     padding: 0.5rem;
     border-radius: 15px;
     display: flex;
@@ -36,7 +36,7 @@
 }
 
 .chatview-me-message > span {
-    background-color: lightgreen;
+    background-color: #ad0a26;
 }
 
 .chatview-me-message > span > img, .chatview-bot-message > span > img {
