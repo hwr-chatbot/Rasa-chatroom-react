@@ -9,7 +9,8 @@
 }
 
 .chatview-container {
-    padding: 2rem calc(10% - 1rem) 2rem calc(10% - 1rem);
+    padding: 2rem calc(10% - 1rem) 0.5rem calc(10% - 1rem);
+    overflow-y: auto;
 }
 
 .chatinput-container {
