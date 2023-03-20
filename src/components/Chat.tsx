@@ -17,7 +17,7 @@ export default function Chat({}: ChatProps) {
     const [state, setState] = useState<ChatState>({history: []});
     return (
         <div className="chat-container">
-            <div>
+            <div className="chatview-container">
                 <ChatView history={state.history}/>
             </div>
             <div className="chatinput-container">

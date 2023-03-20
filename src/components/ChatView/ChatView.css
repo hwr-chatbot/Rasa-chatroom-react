@@ -8,11 +8,11 @@
     display: flex;
     flex-direction: column;
     max-height: calc(100vh - 3rem);
-    overflow-y: scroll;
+    overflow-y: hide;
 }
 
 .chatview-me-message, .chatview-bot-message {
-    margin: 1rem;
+    margin: 1rem 0 1rem 0;
     display: flex;
     word-wrap: anywhere;
     white-space: pre-line;
