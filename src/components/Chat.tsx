@@ -20,6 +20,11 @@ export default function Chat({}: ChatProps) {
             <div className="chatview-container">
                 <ChatView history={state.history}/>
             </div>
+            {/* <div className="container1">
+                <div className="item1">Wie kann ich mich an der HWR anmelden?</div>
+                <div className="item2">Wo liegt die HWR?</div>
+                <div className="item3">Wofür steht HWR?</div>
+            </div> */}
             <div className="chatinput-container">
                 <ChatInput history={state.history} updateHistoryFunction={setState}/>
             </div>

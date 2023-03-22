@@ -25,3 +25,22 @@
     align-items: center;
     justify-content: center;
 }
+
+/* .container1 {
+    align-self: center;
+    color: white;
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    padding-bottom: 0.2em;
+}
+
+.container1 > div {
+    display: flex;
+    border-radius: 15px;
+    width: 30%;
+    background-color: #ad0a25;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+} */
