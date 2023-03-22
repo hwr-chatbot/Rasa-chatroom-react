@@ -18,7 +18,7 @@ const requestOptions: RequestInit = {
 }
 
 export default function ChatInput(props: ChatInputProps) {
-    return <input type="text" enterKeyHint="enter" placeholder="Message" className="input-field" onKeyDown={(e) => {
+    return <input autoFocus type="text" enterKeyHint="enter" placeholder="Message" className="input-field" onKeyDown={(e) => {
         if (e.key == "Enter" && e.currentTarget.value !== "") {
             props.history.push({text: e.currentTarget.value, fromBot: false})
             props.updateHistoryFunction({
