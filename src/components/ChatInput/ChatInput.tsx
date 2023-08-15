@@ -1,51 +1,65 @@
-import {ChatMessage} from "../../types/ChatMessage";
+import { ChatMessage } from "../../types/ChatMessage"
 import "./ChatInput.css"
 
 type ChatInputProps = {
-    history: ChatMessage[]
-    updateHistoryFunction: Function
+	history: ChatMessage[]
+	updateHistoryFunction: Function
 }
 
 type RasaApiResponse = {
-    text: string,
-    image: string,
-    recipient: string
+	text: string
+	image: string
+	recipient: string
 }
 
 const requestOptions: RequestInit = {
-    method: "POST",
-    mode: "cors",
+	method: "POST",
+	mode: "cors",
 }
 
 export default function ChatInput(props: ChatInputProps) {
-    return <input autoFocus type="text" enterKeyHint="enter" placeholder="Message" className="input-field" onKeyDown={(e) => {
-        if (e.key == "Enter" && e.currentTarget.value !== "") {
-            props.history.push({text: e.currentTarget.value, fromBot: false})
-            props.updateHistoryFunction({
-                history: props.history
-            })
+	return (
+		<input
+			autoFocus
+			type="text"
+			enterKeyHint="enter"
+			placeholder="Message"
+			className="input-field"
+			onKeyDown={(e) => {
+				if (e.key == "Enter" && e.currentTarget.value !== "") {
+					props.history.push({ text: e.currentTarget.value, fromBot: false })
+					props.updateHistoryFunction({
+						history: props.history,
+					})
 
-            fetch("http://localhost:5005/webhooks/rest/webhook", {
-                ...requestOptions,
-                body: JSON.stringify({sender: "lucas", message: e.currentTarget.value})
-            })
-                .then((raw) => raw.json())
-                .then((data: RasaApiResponse[]) => {
+					fetch("http://localhost:5005/webhooks/rest/webhook", {
+						...requestOptions,
+						body: JSON.stringify({
+							sender: "lucas",
+							message: e.currentTarget.value,
+						}),
+					})
+						.then((raw) => raw.json())
+						.then((data: RasaApiResponse[]) => {
+							let response: string = data
+								.map((response: RasaApiResponse) => {
+									if (response.text !== undefined) return response.text
+									if (response.image !== undefined) return response.image
+								})
+								.join("\r\n")
 
-                    let response: string = data.map((response: RasaApiResponse) => {
-                        if (response.text !== undefined)
-                            return response.text
-                        if (response.image !== undefined)
-                            return response.image
-                    }).join("\r\n")
+							props.history.push({ text: response, fromBot: true })
+							props.updateHistoryFunction({
+								history: props.history,
+							})
+						})
+						.catch(function (error) {
+							console.log("Error while fetching!\n" + error)
+						})
 
-                    props.history.push({text: response, fromBot: true})
-                    props.updateHistoryFunction({
-                        history: props.history
-                    })
-                })
-
-            e.currentTarget.value = ""
-        }
-    }}/>
+					e.currentTarget.value = ""
+				}
+			}}
+		/>
+	)
 }
