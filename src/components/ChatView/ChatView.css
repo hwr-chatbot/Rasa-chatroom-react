@@ -1,45 +1,63 @@
 .chatview-container {
+}
 
+.url {
+	color: #fff764;
+}
+
+.url:hover {
+	color: #fdff23;
+}
+
+.url:visited {
+	color: #ffc9aa;
+}
+
+.url:active {
+	color: #fdff23;
 }
 
 .chatview-history {
-    list-style: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    max-height: calc(100vh - 3rem);
-    overflow-y: hide;
+	list-style: none;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	max-height: calc(100vh - 3rem);
+	overflow-y: hide;
 }
 
-.chatview-me-message, .chatview-bot-message {
-    margin: 1rem 0 1rem 0;
-    display: flex;
-    word-wrap: anywhere;
-    white-space: pre-line;
-    text-align: left;
+.chatview-me-message,
+.chatview-bot-message {
+	margin: 1rem 0 1rem 0;
+	display: flex;
+	word-wrap: anywhere;
+	white-space: pre-line;
+	text-align: left;
 }
 
 .chatview-me-message {
-    flex-direction: row-reverse;
+	flex-direction: row-reverse;
 }
 
 .chatview-bot-message {
-    flex-direction: row;
+	flex-direction: row;
 }
 
-.chatview-bot-message > span, .chatview-me-message > span {
-    background-color: #d50c2f;
-    padding: 0.5rem;
-    border-radius: 15px;
-    display: flex;
-    max-width: 50%;
+.chatview-bot-message > span,
+.chatview-me-message > span {
+	background-color: #d50c2f;
+	padding: 0.5rem;
+	border-radius: 15px;
+	display: flex;
+	max-width: 50%;
 }
 
 .chatview-me-message > span {
-    background-color: #ad0a26;
+	background-color: #ad0a26;
 }
 
-.chatview-me-message > span > img, .chatview-bot-message > span > img {
-    margin-right: 0.5rem;
-    border-radius: 10px;
+.chatview-me-message > span > img,
+.chatview-bot-message > span > img {
+	margin-right: 0.5rem;
+	border-radius: 10px;
 }

@@ -16,7 +16,7 @@ type ChatState = {
 export default function Chat({}: ChatProps) {
 	const firstMessage: ChatMessage = {
 		fromBot: true,
-		text: 'Hi, mein Name ist MIKA. Ich bin ein Chatbot und ich kann dir dabei helfen, mehr Informationen über die HWR zu bekommen. Stelle mir dafür einfach eine Frage, wie z.B. "Wofür steht HWR?"',
+		text: 'Hi, mein Name ist MIKA. https://www.hwr-berlin.de/hwr-berlin/ueber-uns/geschichte/. Ich bin ein Chatbot und ich kann dir dabei helfen, mehr Informationen über die HWR zu bekommen. Stelle mir dafür einfach eine Frage, wie z.B. "Was bedeutet HWR?" oder "Welche Studiengänge gibt es an der HWR Berlin?"',
 	}
 	const [state, setState] = useState<ChatState>({ history: [firstMessage] })
 	return (
