@@ -3,6 +3,7 @@ import ChatInput from "./ChatInput/ChatInput"
 import ChatView from "./ChatView/ChatView"
 import { ChatMessage } from "../types/ChatMessage"
 import "./Chat.css"
+import ModalWindow from "./Modal/ModalWindow"
 
 type ChatProps = {
 	host: string
@@ -25,12 +26,14 @@ export default function Chat({}: ChatProps) {
 				<ChatView history={state.history} />
 			</div>
 			{/* <div className="container1">
-                <div className="item1">Wie kann ich mich an der HWR anmelden?</div>
-                <div className="item2">Wo liegt die HWR?</div>
-                <div className="item3">Wofür steht HWR?</div>
-            </div> */}
+				<div className="item1">Wie kann ich mich an der HWR anmelden?</div>
+				<div className="item2">Wo liegt die HWR?</div>
+				<div className="item3">Wofür steht HWR?</div>
+			</div> */}
 			<div className="chatinput-container">
+				<div></div>
 				<ChatInput history={state.history} updateHistoryFunction={setState} />
+				<ModalWindow></ModalWindow>
 			</div>
 		</div>
 	)
