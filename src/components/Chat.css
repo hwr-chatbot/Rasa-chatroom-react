@@ -1,46 +1,49 @@
 .chat-container {
-    /* padding: 2rem; */
-    color: #ffffff;
-    justify-self: flex-end;
-    /* border: 2px solid #111; */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
+	/* padding: 2rem; */
+	color: #ffffff;
+	justify-self: flex-end;
+	/* border: 2px solid #111; */
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
 }
 
 .chatview-container {
-    padding: 2rem calc(10% - 1rem) 0.5rem calc(10% - 1rem);
-    overflow-y: auto;
+	padding: 2rem calc(10% - 1rem) 0.5rem calc(10% - 1rem);
+	overflow-y: auto;
+	height: 90%;
 }
 
 .chatinput-container {
-    /* position: fixed;
-    bottom: 0;
-    left: 50%; */
-    /* transform: translateX(-50%); */
-    width: 100%;
-    background-color: #1a1a1a;
-    height: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+	width: 100%;
+	background-color: #1a1a1a;
+	height: 50px;
+	display: grid;
+	grid-template-columns: auto 80% auto;
+	justify-items: center;
+	align-items: center;
 }
 
 /* .container1 {
-    align-self: center;
-    color: white;
-    display: flex;
-    width: 80%;
-    justify-content: space-between;
-    padding-bottom: 0.2em;
+	align-self: center;
+	color: white;
+	display: flex;
+	width: calc(100% - 2 * (10% - 1rem));
+	padding-left: calc(10% - 1rem);
+	padding-right: calc(10% - 1rem);
+	min-height: 40px;
+	justify-content: space-between;
+	padding-bottom: 0.2em;
+	margin-bottom: 0.5em;
 }
 
 .container1 > div {
-    display: flex;
-    border-radius: 15px;
-    width: 30%;
-    background-color: #ad0a25;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+	display: flex;
+	border-radius: 15px;
+	width: 30%;
+	background-color: #ad0a25;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow-y: auto;
 } */
