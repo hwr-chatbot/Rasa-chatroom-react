@@ -1,5 +1,5 @@
 .input-field {
-	width: 100%;
+	width: calc(100% - 2rem);
 	border-radius: 15px;
 	-moz-border-radius: 15px;
 	-webkit-border-radius: 15px;

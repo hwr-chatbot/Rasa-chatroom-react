@@ -1,20 +1,9 @@
+import { ChatManager } from "../../ChatManager"
 import { ChatMessage } from "../../types/ChatMessage"
 import "./ChatInput.css"
 
 type ChatInputProps = {
-	history: ChatMessage[]
-	updateHistoryFunction: Function
-}
-
-type RasaApiResponse = {
-	text: string
-	image: string
-	recipient: string
-}
-
-const requestOptions: RequestInit = {
-	method: "POST",
-	mode: "cors",
+	chatManager: ChatManager
 }
 
 export default function ChatInput(props: ChatInputProps) {
@@ -27,36 +16,7 @@ export default function ChatInput(props: ChatInputProps) {
 			className="input-field"
 			onKeyDown={(e) => {
 				if (e.key == "Enter" && e.currentTarget.value !== "") {
-					props.history.push({ text: e.currentTarget.value, fromBot: false })
-					props.updateHistoryFunction({
-						history: props.history,
-					})
-
-					fetch("http://localhost:5005/webhooks/rest/webhook", {
-						...requestOptions,
-						body: JSON.stringify({
-							sender: "lucas",
-							message: e.currentTarget.value,
-						}),
-					})
-						.then((raw) => raw.json())
-						.then((data: RasaApiResponse[]) => {
-							let response: string = data
-								.map((response: RasaApiResponse) => {
-									if (response.text !== undefined) return response.text
-									if (response.image !== undefined) return response.image
-								})
-								.join("\r\n")
-
-							props.history.push({ text: response, fromBot: true })
-							props.updateHistoryFunction({
-								history: props.history,
-							})
-						})
-						.catch(function (error) {
-							console.log("Error while fetching!\n" + error)
-						})
-
+					props.chatManager.sendMessage(e.currentTarget.value)
 					e.currentTarget.value = ""
 				}
 			}}

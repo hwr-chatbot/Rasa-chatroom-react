@@ -1,0 +1,17 @@
+.chatBubble {
+	display: flex;
+	border-radius: 15px;
+	width: 30%;
+	background-color: #ad0a25;
+	align-content: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	overflow-y: auto;
+	user-select: none;
+}
+
+.chatBubble:hover {
+	cursor: pointer;
+	background-color: #8a0f23;
+	transform: translate(0px, -2px) scale(1.03);
+}

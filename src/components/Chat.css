@@ -22,28 +22,19 @@
 	grid-template-columns: auto 80% auto;
 	justify-items: center;
 	align-items: center;
+	flex-shrink: 0;
 }
 
-/* .container1 {
-	align-self: center;
+.container1 {
+	align-self: left;
 	color: white;
 	display: flex;
-	width: calc(100% - 2 * (10% - 1rem));
+	width: calc(80%);
 	padding-left: calc(10% - 1rem);
 	padding-right: calc(10% - 1rem);
 	min-height: 40px;
 	justify-content: space-between;
 	padding-bottom: 0.2em;
 	margin-bottom: 0.5em;
+	margin-top: 0.5em;
 }
-
-.container1 > div {
-	display: flex;
-	border-radius: 15px;
-	width: 30%;
-	background-color: #ad0a25;
-	align-content: center;
-	justify-content: center;
-	flex-wrap: wrap;
-	overflow-y: auto;
-} */
