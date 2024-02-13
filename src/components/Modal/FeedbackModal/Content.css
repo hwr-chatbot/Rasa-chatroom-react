@@ -1,0 +1,66 @@
+form {
+	margin: 1rem auto;
+	width: 500px;
+	max-width: 80%;
+	padding: 1rem;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+}
+form > div {
+	display: flex;
+}
+.input-group {
+	display: flex;
+	flex-direction: column;
+	margin: 1rem 0;
+}
+.input-group > label {
+	font-size: 0.9rem;
+	font-weight: 700;
+	margin-bottom: 0.3rem;
+}
+.input-group {
+	width: 100%;
+	display: flex;
+}
+.input-group > input {
+	padding: 0.3rem 0.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	width: 100%;
+	background-color: white;
+	color: #000;
+	align-self: center;
+}
+.input-group > textarea {
+	padding: 0.3rem 0.5rem;
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 40px;
+	background-color: white;
+	color: #000;
+	align-self: center;
+}
+.input-group > div {
+	padding: 0.5rem 1rem;
+	background: #e34728;
+	margin-left: 0.5rem;
+	color: #fff;
+	font-weight: 700;
+	cursor: pointer;
+}
+
+.submit-btn {
+	width: 30%;
+	padding: 0.5rem 1rem;
+	border: 1px solid #e34728;
+	background: #fff;
+	margin: 1.2rem 0;
+	color: #e34728;
+	font-size: 0.9rem;
+	font-weight: 700;
+	cursor: pointer;
+	align-self: center;
+}

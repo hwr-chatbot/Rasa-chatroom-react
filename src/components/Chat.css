@@ -25,16 +25,17 @@
 	flex-shrink: 0;
 }
 
-.container1 {
+.chatbubble-container {
 	align-self: left;
 	color: white;
 	display: flex;
 	width: calc(80%);
 	padding-left: calc(10% - 1rem);
 	padding-right: calc(10% - 1rem);
-	min-height: 40px;
+	min-height: 48px;
 	justify-content: space-between;
 	padding-bottom: 0.2em;
 	margin-bottom: 0.5em;
 	margin-top: 0.5em;
+	font-size: 1em;
 }

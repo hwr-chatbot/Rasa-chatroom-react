@@ -1,9 +1,8 @@
 import { Ref, useEffect, useRef, useState } from "react"
 import React from "react"
 import "./ModalWindow.css"
-import Content from "./Content"
 
-export default function ModalHelp() {
+export default function ModalWindow(props: any) {
 	const [show, setShow] = useState<boolean>(false)
 
 	function useOutsideAlerter(ref: { current: any }) {
@@ -32,7 +31,7 @@ export default function ModalHelp() {
 			{show ? <div id="page-mask"></div> : <></>}
 			<div ref={wrapperRef}>
 				<button className="showButton" onClick={() => setShow((show) => !show)}>
-					?
+					{props.symbol ? props.symbol : "?"}
 				</button>
 				{show ? (
 					<div id="modal" className="modal">
@@ -43,7 +42,7 @@ export default function ModalHelp() {
 							✖
 						</div>
 
-						<Content />
+						{props.content}
 					</div>
 				) : (
 					<div></div>
