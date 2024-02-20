@@ -24,6 +24,7 @@ form > div {
 .input-group {
 	width: 100%;
 	display: flex;
+	color: #242424;
 }
 .input-group > input {
 	padding: 0.3rem 0.5rem;
@@ -32,10 +33,12 @@ form > div {
 	background-color: white;
 	color: #000;
 	align-self: center;
+	border-radius: 6px;
 }
 .input-group > textarea {
 	padding: 0.3rem 0.5rem;
 	border: 1px solid rgba(0, 0, 0, 0.2);
+	border-radius: 6px;
 	min-width: 100%;
 	max-width: 100%;
 	min-height: 40px;
