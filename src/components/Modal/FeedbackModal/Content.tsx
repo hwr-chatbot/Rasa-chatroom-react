@@ -20,18 +20,18 @@ export default function Content() {
   return (
     <>
       <div className='content'>
-        <h2>Feedback zu MIKA</h2>
+        <h2>Feedback MIKA</h2>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className='input-group'>
-            <label htmlFor='email'>Ihre Email</label>
+            <label htmlFor='email'>Email</label>
             <input type='email' id='email' />
           </div>
           <div className='input-group'>
-            <label htmlFor='message'>Nachricht</label>
+            <label htmlFor='message'>Message</label>
             <textarea id='message' />
           </div>
           <button type='submit' className='submit-btn'>
-            Absenden
+            Send
           </button>
         </form>
       </div>

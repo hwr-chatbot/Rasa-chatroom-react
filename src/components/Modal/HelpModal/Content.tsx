@@ -7,13 +7,13 @@ export default function Content() {
 	return (
 		<>
 			<div className="content">
-				<h2>MIKA</h2>
+				<h2>About MIKA</h2>
 				<span>
-					Dieser Chatbot entstand im Rahmen mehrerer Studienarbeiten von
-					Studenten der HWR Berlin. Er kann Fragen zu verschiedenen Themen mit
-					Bezug auf die HWR beantworten.
+					This chatbot was created as part of several student research projects by
+					students of the HWR Berlin. It can answer questions on various topics
+					related to the HWR.
 					<br /> <br />
-					Einige Fragen sind:
+					Here are some questions you can ask Mika:
 					<ul className="questions">
 						{questions.map((question) => (
 							<li>{question}</li>
