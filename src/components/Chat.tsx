@@ -23,7 +23,7 @@ export default function Chat({}: ChatProps) {
 	const chatManager = new ChatManager(firstMessage)
 
 	return (
-		<div className="chat-container">
+		<div className="chat-container rounded-md border-4 border-red-600 w-5/12 h-4/5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
 			<div className="chatview-container">
 				<ChatView history={chatManager.getHistory()} />
 			</div>
