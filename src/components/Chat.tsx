@@ -18,7 +18,7 @@ type ChatProps = {
 export default function Chat({}: ChatProps) {
 	const firstMessage: ChatMessage = {
 		fromBot: true,
-		text: 'Hi, my name is MIKA. Im a chatbot and I can help you get more information about the HWR. Just ask me a question, such as "What does HWR mean?" or "What degree programs are available at HWR Berlin?"',
+		text: 'Hi, my name is MIKA. Im a chatbot and I can help you get more information about the master programs for international students at the HWR. Please write a new message for each request and keep them simple. Dont provide any personal data.',
 	}
 	const chatManager = new ChatManager(firstMessage)
 
