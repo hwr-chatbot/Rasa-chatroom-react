@@ -16,6 +16,11 @@ type RasaApiResponse = {
 	recipient: string
 }
 
+const delay = async (ms: number) => {
+	return new Promise((resolve) => 
+		setTimeout(resolve, ms));
+};
+
 export class ChatManager {
 	private chatHistory
 	private setChatHistory
@@ -32,12 +37,22 @@ export class ChatManager {
 		return this.chatHistory.history
 	}
 
+
 	sendMessage(message: string) {
-		console.log("sendMessage")
+		let message_id: number
 		this.chatHistory.history.push({ text: message, fromBot: false })
 		this.setChatHistory({
 			history: this.chatHistory.history,
 		})
+
+		delay(350).then(() => {
+			this.chatHistory.history.push({ text: "...", fromBot: true })
+			this.setChatHistory({
+				history: this.chatHistory.history,
+			})
+			message_id = this.chatHistory.history.length - 1
+		})
+
 		fetch("http://localhost:5005/webhooks/rest/webhook", {
 			...requestOptions,
 			body: JSON.stringify({
@@ -54,9 +69,11 @@ export class ChatManager {
 					})
 					.join("\r\n")
 
-				this.chatHistory.history.push({ text: response, fromBot: true })
-				this.setChatHistory({
-					history: this.chatHistory.history,
+				delay(750).then(() => {
+					this.chatHistory.history[message_id] = { text: response, fromBot: true }
+					this.setChatHistory({
+						history: this.chatHistory.history,
+					})
 				})
 			})
 			.catch(function (error) {
