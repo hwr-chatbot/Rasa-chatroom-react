@@ -60,7 +60,7 @@ export default function ChatView(props: ChatViewProps) {
 							<span className='flex h-full ml-2'>
 								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.2s]'></div>
 								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.1s]'></div>
-								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce'></div>
+								<div className='h-2 w-2 m-auto mr-3 float-left bg-slate-200 rounded-full animate-bounce'></div>
 					   		</span>
 						) : (
 							urlify(element.text)
