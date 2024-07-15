@@ -52,16 +52,16 @@ export default function ChatView(props: ChatViewProps) {
 				>
 					<span className="chatview-chatbubble">
 						{element.fromBot ? (
-							<img className="w-[25px] h-[25px]" src={mika} alt="Mika-Bot" />
+							<img className="w-[45px] h-[45px]" src={mika} alt="Mika-Bot" />
 						) : (
 							""
 						)}
 						<span> { element.text === "..." ? (
-							<div className='inline-block align-middle'>
-								<div className='h-2 w-2 m-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.2s]'></div>
-								<div className='h-2 w-2 m-1 float-left bg-slate-100 rounded-full animate-bounce [animation-delay:-0.1s]'></div>
-								<div className='h-2 w-2 m-1 float-left bg-slate-200 rounded-full animate-bounce'></div>
-					   		</div>
+							<span className='flex h-full ml-2'>
+								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.2s]'></div>
+								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-100 rounded-full animate-bounce [animation-delay:-0.1s]'></div>
+								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce'></div>
+					   		</span>
 						) : (
 							urlify(element.text)
 						)
