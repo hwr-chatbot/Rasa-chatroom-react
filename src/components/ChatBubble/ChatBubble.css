@@ -1,14 +1,16 @@
 .chatBubble {
 	display: flex;
 	border-radius: 15px;
-	width: 30%;
+	padding:6px;
+	margin-left:5px;
+	width: auto;
 	background-color: #ad0a25;
 	align-content: center;
 	justify-content: center;
 	flex-wrap: wrap;
-	overflow-y: auto;
+	overflow-y: hidden;
 	user-select: none;
-	height: 50px;
+	height: auto;
 }
 
 .chatBubble:hover {

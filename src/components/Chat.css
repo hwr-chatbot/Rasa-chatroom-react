@@ -26,10 +26,8 @@
 }
 
 .chatbubble-container {
-	align-self: left;
 	color: white;
 	display: flex;
-	width: calc(80%);
 	padding-left: calc(10% - 1rem);
 	padding-right: calc(10% - 1rem);
 	min-height: 48px;
