@@ -1,10 +1,15 @@
 import "./App.css"
-import Chat from "./components/Chat"
+import Main from "./components/Main"
+import Header from "./components/Header/Header"
+import Footer from "./components/Footer/Footer"
+
 
 function App() {
 	return (
 		<div className="app">
-			<Chat host="localhost" port={5505} useHttps={true} />
+			     <Header />
+				 <Main />
+				 <Footer />
 		</div>
 	)
 }
