@@ -40,3 +40,4 @@ export default function Chat({}: ChatProps) {
 		</div>
 	)
 }
+

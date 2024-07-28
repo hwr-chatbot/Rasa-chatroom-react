@@ -10,6 +10,7 @@ type ChatViewProps = {
 export default function ChatView(props: ChatViewProps) {
 	const messagesEndRef = useRef<HTMLDivElement>(null)
 
+
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
 	}
@@ -18,6 +19,8 @@ export default function ChatView(props: ChatViewProps) {
 		scrollToBottom()
 	})
 
+
+
 	function urlify(text: string) {
 		const urlRegex = /(https?:\/\/[^\s]+)/g
 		return text.split(urlRegex).map((part) => {
@@ -25,7 +28,7 @@ export default function ChatView(props: ChatViewProps) {
 				return (
 					<a
 						key={Math.random().toString()}
-						className={"url"}
+						className={"url break-all"}
 						href={part}
 						target="_blank"
 						rel="noopener noreferrer"
@@ -49,11 +52,20 @@ export default function ChatView(props: ChatViewProps) {
 				>
 					<span className="chatview-chatbubble">
 						{element.fromBot ? (
-							<img src={mika} width={25} height={25} alt="Mika-Bot" />
+							<img className="w-[45px] h-[45px]" src={mika} alt="Mika-Bot" />
 						) : (
 							""
 						)}
-						<span> {urlify(element.text)} </span>
+						<span> { element.text === "..." ? (
+							<span className='flex h-full ml-2'>
+								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.2s]'></div>
+								<div className='h-2 w-2 m-auto mr-1 float-left bg-slate-200 rounded-full animate-bounce [animation-delay:-0.1s]'></div>
+								<div className='h-2 w-2 m-auto mr-3 float-left bg-slate-200 rounded-full animate-bounce'></div>
+					   		</span>
+						) : (
+							urlify(element.text)
+						)
+					} </span>
 					</span>
 				</li>
 			))}

@@ -9,7 +9,7 @@
 }
 
 .chatview-container {
-	padding: 2rem calc(10% - 1rem) 0.5rem calc(10% - 1rem);
+	padding: 0.5rem calc(10% - 3rem) 0.5rem calc(10% - 3rem);
 	overflow-y: auto;
 	height: 90%;
 }
@@ -26,10 +26,8 @@
 }
 
 .chatbubble-container {
-	align-self: left;
 	color: white;
 	display: flex;
-	width: calc(80%);
 	padding-left: calc(10% - 1rem);
 	padding-right: calc(10% - 1rem);
 	min-height: 48px;
