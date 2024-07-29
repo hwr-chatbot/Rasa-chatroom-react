@@ -42,7 +42,7 @@
 .chatview-bot-message > span,
 .chatview-me-message > span {
 	background-color: #d50c2f;
-	padding: 0.5rem;
+	padding: 0.7rem;
 	border-radius: 15px;
 	display: flex;
 	max-width: 95%;

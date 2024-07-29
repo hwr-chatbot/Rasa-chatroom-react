@@ -9,11 +9,10 @@ type ChatInputProps = {
 export default function ChatInput(props: ChatInputProps) {
 	return (
 		<input
-			autoFocus
 			type="text"
 			enterKeyHint="enter"
 			placeholder="Message"
-			className="input-field"
+			className="w-full rounded-md border-4 border-gray-400 p-2 focus:border-[#4979a6] focus:ring-0 focus:outline-none"
 			onKeyDown={(e) => {
 				if (e.key == "Enter" && e.currentTarget.value !== "") {
 					props.chatManager.sendMessage(e.currentTarget.value)

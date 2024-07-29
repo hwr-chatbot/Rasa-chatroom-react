@@ -43,14 +43,14 @@ const Feedback = () => {
 						</p><br></br>
 						<p>
 							MIKA is a prototype and we are very interested in your feedback. Please let us know what you think of MIKA and how we can improve it.
-						</p><br></br>
+						</p><br></br><br></br>
 						<p className="font-bold">
 							What we are most interested in:
 						</p><br></br>
 						<p>
 							We are especially interested in cases where MIKA was unable to answer your question or gave you incorrect information. Please let us know what you asked and what MIKA answered.
-						</p><br></br>
-						<p className="font-bold">
+						</p><br></br><br></br>
+						<p className="font-bold text-red-700">
 							Thank you!
 						</p><br></br>
 					</div>

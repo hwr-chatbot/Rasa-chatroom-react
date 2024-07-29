@@ -1,7 +1,7 @@
 import "./ChatView.css"
 import { ChatMessage } from "../../types/ChatMessage"
 import mika from "../../assets/mika_profilepicture.png"
-import { useEffect, useRef } from "react"
+import { useLayoutEffect , useRef } from "react"
 
 type ChatViewProps = {
 	history: ChatMessage[]
@@ -9,17 +9,19 @@ type ChatViewProps = {
 
 export default function ChatView(props: ChatViewProps) {
 	const messagesEndRef = useRef<HTMLDivElement>(null)
-
+	const firstUpdate = useRef(true)
 
 	const scrollToBottom = () => {
 		messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
 	}
 
-	useEffect(() => {
-		scrollToBottom()
+	useLayoutEffect(() => {
+		if (firstUpdate.current) {
+			firstUpdate.current = false;
+			return;
+		  }
+		  scrollToBottom()
 	})
-
-
 
 	function urlify(text: string) {
 		const urlRegex = /(https?:\/\/[^\s]+)/g

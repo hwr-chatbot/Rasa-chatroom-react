@@ -37,32 +37,29 @@ export default function Chat({}: ChatProps) {
 					<div className="bg-white pl-0 p-8 text-left">
 						<h1 className="text-[#202020] text-5xl font-bold tracking-tight">Chat with MIKA</h1>
 					</div>
-					<div className="chat-container h-[600px] overflow-hidden rounded-md border-4 bg-white">
+					<div className="chat-container text-md text-white h-[600px] overflow-hidden rounded-md border-4 bg-white flex justify-items-end justify-end flex-col">
 						
-						<div className="chatview-container">
+						<div className="chatview-container p-4 overflow-y-auto h-[90%]">
 							<ChatView history={chatManager.getHistory()} />
 						</div>
 						<div className="chatbubble-container">
 							<ChatBubble chatManager={chatManager} message={questions[0]} />
 							<ChatBubble chatManager={chatManager} message={questions[1]} />
-							{/* <ChatBubble chatManager={chatManager} message={questions[2]} /> */}
-
+							<ChatBubble chatManager={chatManager} message={questions[2]} />
 						</div>
-						<div className="chatinput-container">
-							<FeedbackModal></FeedbackModal>
+						<div className="chatinput-container w-full h-[50px] text-black">
 							<ChatInput chatManager={chatManager} />
-							<HelpModal></HelpModal>
 						</div>
 					</div>
 				</div>
 				<div className="col-span-1 mt-12">
 					<div className="bg-gray-100 p-12 text-left">
-						<p className="font-bold">
+						<p className="font-bold text-red-700">
 							WARNING:
 						</p><br></br>
 						<p>
 							Dear visitor, this chatbot is a prototype and is not yet fully functional. Please do not rely on the information provided by MIKA. We apologize for any mistakes and bugs.
-						</p><br></br>
+						</p><br></br><br></br>
 						<p className="font-bold">
 							How to use MIKA:
 						</p><br></br>
