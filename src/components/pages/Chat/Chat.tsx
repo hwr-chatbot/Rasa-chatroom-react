@@ -37,7 +37,7 @@ export default function Chat({}: ChatProps) {
 					<div className="bg-white pl-0 p-8 text-left">
 						<h1 className="text-[#202020] text-5xl font-bold tracking-tight">Chat with MIKA</h1>
 					</div>
-					<div className="chat-container text-md text-white h-[600px] overflow-hidden rounded-md border-4 bg-white flex justify-items-end justify-end flex-col">
+					<div className="chat-container text-md text-white h-[600px] pb-4 overflow-hidden rounded-md border-4 bg-white flex justify-items-end justify-end flex-col">
 						
 						<div className="chatview-container p-4 overflow-y-auto h-[90%]">
 							<ChatView history={chatManager.getHistory()} />
