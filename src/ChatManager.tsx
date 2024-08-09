@@ -37,13 +37,14 @@ export class ChatManager {
 		return this.chatHistory.history
 	}
 
-
 	sendMessage(message: string) {
 		let message_id: number
 		this.chatHistory.history.push({ text: message, fromBot: false })
 		this.setChatHistory({
 			history: this.chatHistory.history,
 		})
+
+		console.log(this.chatHistory);
 
 		delay(350).then(() => {
 			this.chatHistory.history.push({ text: "...", fromBot: true })
