@@ -64,7 +64,7 @@ export default function Chat({}: ChatProps) {
 							How to use MIKA:
 						</p><br></br>
 						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta porta ullamcorper. Fusce ullamcorper urna vel consequat porttitor.
+						This section is a work in progress. Sorry!
 						</p><br></br>
 					</div>
 				</div>
