@@ -3,8 +3,6 @@ import React from 'react';
 const Downloader = ({data,fileName} : {data:any, fileName:any}) => {
   const Downloader = () => {
     const list_wrap = document.querySelector(data) as HTMLElement; 
-    
-
     const list = Array.from(list_wrap.getElementsByTagName("li"))
 
     type exportData = {
@@ -12,9 +10,6 @@ const Downloader = ({data,fileName} : {data:any, fileName:any}) => {
      };
 
     let export_data : exportData = {};      
-
-    console.log (list);
-
     let msg_number = 0;
 
     list.forEach(element => {
@@ -27,8 +22,6 @@ const Downloader = ({data,fileName} : {data:any, fileName:any}) => {
             msg_number++
         }
     });
-
-    console.log(export_data)
 
     const jsonData = new Blob([JSON.stringify(export_data, null, "\t")], { type: 'application/json' });
     const jsonURL = URL.createObjectURL(jsonData);
