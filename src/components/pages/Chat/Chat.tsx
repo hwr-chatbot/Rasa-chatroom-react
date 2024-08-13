@@ -9,6 +9,8 @@ import ChatBubble from "../../ChatBubble/ChatBubble"
 import { questions } from "../../../assets/questions"
 import FeedbackModal from "../../Modal/FeedbackModal"
 import MikaHeader from '../../../assets/mika_header.jpg';
+import Downloader from '../../Downloader/Downloader';
+
 
 type ChatProps = {
 	host: string
@@ -16,12 +18,15 @@ type ChatProps = {
 	useHttps: boolean
 }
 
+
+
 export default function Chat({}: ChatProps) {
 	const firstMessage: ChatMessage = {
 		fromBot: true,
 		text: 'Hi, my name is MIKA. Im a chatbot and I can help you get more information about the master programs for international students at the HWR. Please write a new message for each request, keep them simple and don\'t provide any personal data.',
 	}
 	const chatManager = new ChatManager(firstMessage)
+	const fileName = "mika_chat_" + new Date().toISOString().slice(0, -8);
 
 	return (
 		<div className="max-w-[1440px] ml-auto mr-auto h-auto">
@@ -37,8 +42,8 @@ export default function Chat({}: ChatProps) {
 					<div className="bg-white pl-0 p-8 text-left">
 						<h1 className="text-[#202020] text-5xl font-bold tracking-tight">Chat with MIKA</h1>
 					</div>
-					<div className="chat-container text-md text-white h-[600px] overflow-hidden rounded-md border-4 bg-white flex justify-items-end justify-end flex-col">
-						
+					<div className="chat-container relative text-md text-white h-[600px] pb-4 overflow-hidden rounded-md border-4 bg-white flex justify-items-end justify-end flex-col">
+						<Downloader data={'.chatview-history'} fileName={fileName} />
 						<div className="chatview-container p-4 overflow-y-auto h-[90%]">
 							<ChatView history={chatManager.getHistory()} />
 						</div>
@@ -64,7 +69,7 @@ export default function Chat({}: ChatProps) {
 							How to use MIKA:
 						</p><br></br>
 						<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut porta porta ullamcorper. Fusce ullamcorper urna vel consequat porttitor.
+						This section is a work in progress. Sorry!
 						</p><br></br>
 					</div>
 				</div>
