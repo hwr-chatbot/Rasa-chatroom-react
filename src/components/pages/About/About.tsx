@@ -39,12 +39,15 @@ const About = () => {
 						<p className="font-bold">
 							List of contributors:
 						</p><br></br>
-						<p>
+						<p> 
 							Arian Härtl <br></br>
 							Dimitar Dimitrov <br></br>
 							Fabian Rother <br></br>
 							Pascal Heyn <br></br>
+							Corinne Kessler<br></br>
 							Luca Dommel <br></br>
+							Marc Andresen<br></br>
+							Lucas Brüning<br></br>
 						</p><br></br>
 					</div>
 				</div>
