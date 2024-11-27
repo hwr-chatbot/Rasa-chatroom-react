@@ -63,13 +63,13 @@ export default function Chat({}: ChatProps) {
 							WARNING:
 						</p><br></br>
 						<p>
-							Dear visitor, this chatbot is a prototype and is not yet fully functional. Please do not rely on the information provided by MIKA. We apologize for any mistakes and bugs.
+							Dear visitor, this chatbot is a work-in-progress. Please do not rely on the information provided by MIKA. We thank you for your understanding.
 						</p><br></br><br></br>
 						<p className="font-bold">
 							How to use MIKA:
 						</p><br></br>
 						<p>
-						This section is a work in progress. Sorry!
+							Ask MIKA simple, short questions with key words about your enquiry. MIKA will do its best to find an answer for you. MIKA does not save or remember any previous information, so it can not recall any previous exchanges it has had. Please remember to always sek advice directly via email, telephone or in-person consultation with the Student Advisory staff. Feedback can be sent tp studienberatung@hwr-berlin.de
 						</p><br></br>
 					</div>
 				</div>
