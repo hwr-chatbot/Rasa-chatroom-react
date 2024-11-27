@@ -69,7 +69,7 @@ export default function Chat({}: ChatProps) {
 							How to use MIKA:
 						</p><br></br>
 						<p>
-							Ask MIKA simple, short questions with key words about your enquiry. MIKA will do its best to find an answer for you. MIKA does not save or remember any previous information, so it can not recall any previous exchanges it has had. Please remember to always sek advice directly via email, telephone or in-person consultation with the Student Advisory staff. Feedback can be sent tp studienberatung@hwr-berlin.de
+							Ask MIKA simple, short questions with key words about your enquiry. MIKA will do its best to find an answer for you. MIKA does not save or remember any previous information, so it can not recall any previous exchanges it has had. Please remember to always sek advice directly via email, telephone or in-person consultation with the Student Advisory staff. Feedback can be sent to studienberatung@hwr-berlin.de
 						</p><br></br>
 					</div>
 				</div>
