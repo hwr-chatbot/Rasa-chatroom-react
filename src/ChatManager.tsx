@@ -54,7 +54,7 @@ export class ChatManager {
 			message_id = this.chatHistory.history.length - 1
 		})
 
-		fetch("http://localhost:5005/webhooks/rest/webhook", {
+		fetch("http://mika.lehre.hwr-berlin.de:5005/webhooks/rest/webhook", {
 			...requestOptions,
 			body: JSON.stringify({
 				sender: "lucas",
